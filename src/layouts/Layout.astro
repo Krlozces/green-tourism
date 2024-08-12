@@ -1,0 +1,48 @@
+---
+import Header from "../components/Header.astro";
+import { ViewTransitions } from "astro:transitions";
+interface Props {
+	title: string;
+	description?: string;
+	image?: string
+}
+
+const { title, description = "A simple landing page for turismo verde integrating a chatbot", image ="./images/turism.jpg" } = Astro.props;
+import ChatBot from "../components/Chatbot";
+import 'aos/dist/aos.css'; 
+
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<meta property="og:image" content={image} />
+		<ViewTransitions />
+		<title>{title}</title>
+		<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body class="min-h-screen">
+		<Header />
+		<slot />
+		<ChatBot client:only="react" api={import.meta.env.GEMINI_API_KEY} />
+		<!-- JavaScript para alternar el menú -->
+		<script>
+			import AOS from "aos"; 
+			AOS.init(); 
+			document.getElementById('menu-toggle').addEventListener('click', function() {
+				const navMenu = document.getElementById('nav-menu');
+				navMenu.classList.toggle('max-sm:hidden');
+				navMenu.classList.toggle('max-sm:flex');
+				navMenu.classList.toggle('flex-col');
+				navMenu.classList.toggle('gap-y-4');
+			});
+		</script>
+	</body>
+</html>

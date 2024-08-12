@@ -1,0 +1,56 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import H1 from "../components/H1.astro";
+import Main from '../components/Main.astro';
+import Form from '../components/Form.astro';
+import Footer from '../components/Footer.astro';
+import HeaderCard from '../components/HeaderCard.astro';
+import ServicesSection from '../components/ServicesSection.astro';
+import AboutSection from '../components/AboutSection.astro';
+import Packages from '../components/Packages.astro';
+import Carousel from '../components/Carousel.jsx';
+import CarouselPlaces from '../components/CarouselPlaces';
+import GridGallery from '../components/GridGallery.astro';
+import SliderHeader from '../components/SliderHeader';
+---
+
+<Layout title="Green Tourism">
+	<Main>
+		<H1 text="Green Tourism"/>
+		<SliderHeader client:only="react" />
+		<AboutSection />
+		<HeaderCard title="Travel Most Popular Place" subtitle="DESTINATIONS" />
+		<CarouselPlaces client:only="react" />
+		<section id="services">
+			<ServicesSection />
+		</section>
+		<section
+		id="galeria" class="lg:px-24">
+			<HeaderCard title="Best Tourits's Shared Photos" subtitle="TOUR GALLERY" />
+			<GridGallery>
+				<img loading="lazy" class="rounded-md" src="/001.webp" alt="first-image" slot="first-image" data-aos="slide-left" />
+				<img loading="lazy" class="rounded-md" src="/002.webp" alt="second-image" slot="second-image" data-aos="fadeInUp" />
+				<img loading="lazy" class="rounded-md" src="/003.webp" alt="third-image" slot="third-image" data-aos="fadeInUp" />
+				<img loading="lazy" class="rounded-md" src="/004.webp" alt="fourth-image" slot="fourth-image" data-aos="fadeInUp" />
+				<img loading="lazy" class="rounded-md" src="/005.webp" alt="fifth-image" slot="fifth-image" data-aos="fadeInUp" data-aos-delay="300" />
+			</GridGallery>
+		</section>
+		<section id="packages" class="lg:px-24">
+			<HeaderCard title="The Best Of Our Packages" subtitle="POPULAR PACKAGE" />
+			<Packages />
+		</section>
+		<HeaderCard title="What Saying our Happy Customers" subtitle="TESTIMONIALS" />
+		<Carousel client:only="react" />
+		<HeaderCard title='Our Latest Posts For Travellers' subtitle='LATEST NEWS' />
+		<div class="flex gap-4 justify-center items-center flex-col md:flex-row mt-12 lg:px-24">
+			<Card header='Man Standing on Watching Mountain' body='A lone figure stands atop the mountain, his silhouette stark against the vast horizon.' image='/1.webp' date='30 Feb, 2022' href='#' />
+			<Card header='Handara Gate Uner Blue Sky' body='Bajo un cielo azul despejado, el Handara Gate se alza majestuoso, sus intricados detalles tallados en piedra contrastando con el verdor exuberante que lo rodea. ' image='/2.webp' date='30 Feb, 2022' href='#' />
+			<Card header='Golden Gate Bridge, San Francisco' body='El Golden Gate Bridge se extiende majestuosamente sobre la bahía de San Francisco...' image='/3.webp' date='30 Feb, 2022' href='#' />
+		</div>
+		<section id="contact">
+			<Form />
+		</section>
+		<Footer />
+	</Main>
+</Layout>

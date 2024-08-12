@@ -1,0 +1,35 @@
+---
+import ListSection from "./ListSection.astro";
+---
+<section class="bg-[#00102A] text-white w-full">
+    <section class="flex flex-wrap md:flex-row justify-around">
+        <article class="w-64">
+            <h3 class="font-bold text-2xl pt-4">Green Tourism</h3>
+            <p>
+                Explora la naturaleza con nosotros. Conéctate con la esencia de cada destino mientras cuidas el medio ambiente.
+            </p>
+            <div class="flex space-around">
+                <span class="hover:text-orange-400 hover:cursor-pointer mx-2"><i class="fa-brands fa-square-facebook text-2xl"></i></span>
+                <span class="hover:text-orange-400 hover:cursor-pointer mx-2"><i class="fa-brands fa-square-instagram text-2xl"></i></span>
+                <span class="hover:text-orange-400 hover:cursor-pointer mx-2"><i class="fa-brands fa-square-github text-2xl"></i></span>
+                <span class="hover:text-orange-400 hover:cursor-pointer mx-2"><i class="fa-brands fa-linkedin text-2xl"></i></span>
+            </div>
+        </article>
+        <ListSection list={["Our Story", "Travel blog & Tips", "About Us", "Tour Guide", "Be our Partner"]} title="Quick Links"/>
+        <ListSection list={["Customer Support", "Privacy & Policy", "Terms & Condition", "Forum", "Tour Guide"]} title="Support" />
+        <article class="w-64">
+            <h3 class="font-bold text-2xl pt-4">Newsletter</h3>
+            <form action="#">
+                <input type="email" placeholder="Enter your email" class="w-full p-2
+                border border-gray-400 rounded-md outline-none"/>
+                <button type="submit" class="bg-orange-400 hover:bg-orange-500 text-white
+                font-bold py-2 px-4 rounded my-2">Subscribe</button>
+            </form>
+            <span>Al suscribirte a nuestra lista de correos te mantendrás actualizado</span>
+        </article>
+    </section>
+    <hr/>
+    <div class="flex justify-center py-6">
+        <span class="text-center">&copy; 2024 Krlozces</span>
+    </div>
+</section>

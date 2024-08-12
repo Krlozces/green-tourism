@@ -1,0 +1,20 @@
+---
+import CircleInfo from "./CircleInfo.astro";
+import HeaderCard from "./HeaderCard.astro";
+
+---
+<section class="flex justify-center flex-col md:flex-row lg:flex-row lg:px-24 mb-10">
+    <img src="/hilton.webp" alt="Hilton hotel" width="300px" class="rounded-md mr-12">
+    <article class="flex-col items-center text-wrap lg:flex-row">
+        <HeaderCard title="Luxury Hotel in the Heart of Manhattan" subtitle="ABOUT" />
+        <p class="lg:pr-20">
+            En el corazón vibrante de Manhattan, un lujo sin igual se despliega en cada rincón de este hotel exclusivo. Con vistas panorámicas de la ciudad que nunca duerme, cada habitación es un refugio de elegancia, diseñada con un estilo moderno y toques de sofisticación. Desde el vestíbulo adornado con arte contemporáneo hasta el restaurante gourmet que ofrece delicias culinarias, cada detalle está pensado para ofrecer una experiencia de excelencia.
+        </p>
+        <div class="flex flex-wrap gap-4 w-full">
+            <CircleInfo number={60} title="CLIENTS" />
+            <CircleInfo number={120} title="TOURS" />
+            <CircleInfo number={12} title="BUSINESS" />
+            <CircleInfo number={4} title="SUPPORT" />
+        </div>
+    </article>
+</section>

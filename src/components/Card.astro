@@ -1,0 +1,25 @@
+---
+
+interface Props {
+	header: string;
+	date: string;
+	body: string;
+	href: string;
+	image: string;
+}
+
+const { href, body, image, header, date } = Astro.props;
+---
+
+<div class="relative max-w-sm rounded overflow-hidden shadow-lg">
+	<img src={image} alt="" class="w-full" />
+	<span class="absolute bg-orange-600 rounded-full px-3 py-1 text-sm font-semibold text-white rotate-90 bottom-80">{date}</span>
+	<div class="px-6 py-4">
+		<div class="font-bold text-xl mb-2"><a href="#" class="hover:text-orange-400">{header}</a></div>
+		<p class="text-gray-700 text-base">{body}</p>
+	</div>
+	<div class="px-6 pt-4 pb-2">
+		<a href={href} class="hover:text-orange-400">View Article</a>
+	</div>
+</div>
+

@@ -1,0 +1,16 @@
+---
+type Props = {
+    icon: string;
+    title: string;
+    body: string;
+    button: string;
+};
+const { icon, title, body, button } = Astro.props;
+---
+<div 
+class="bg-white flex flex-col justify-center items-center rounded-md py-4 px-6 my-4 w-80">
+    <span class="material-symbols-outlined">{icon}</span>
+    <h4 class="font-semibold text-xl">{title}</h4>
+    <p class="text-slate-400 py-4">{body}</p>
+    <button class="rounded-full bg-orange-500 text-white font-semibold py-2 px-4">{button}</button>
+</div>

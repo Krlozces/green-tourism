@@ -1,0 +1,13 @@
+---
+import CardService from "./CardService.astro"
+import HeaderCard from "./HeaderCard.astro"
+import Services from '../../public/services.json'
+---
+<section class="bg-slate-100 mt-24 mx-2">
+    <HeaderCard title="What We Offer For You" subtitle="SERVICES" />
+    <div class="flex gap-4 justify-evenly flex-wrap">
+        {Services.map((item)=>(
+            <CardService icon={item.icon} title={item.name} body={item.body} button="Find Out More" />
+        ))}
+    </div>
+</section>

@@ -1,0 +1,20 @@
+---
+type Props = {
+    price: string;
+    days: string;
+    title: string;
+    ubicacion: string;
+    image: string;
+};
+
+const { price, days, title, ubicacion, image } = Astro.props;
+---
+<div class="max-w-sm rounded shadow-lg relative my-4">
+    <img class="w-full hover:cursor-pointer" src={image} alt={title}>
+    <span class="inline-block bg-orange-400 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2 top-6 left-36 absolute">{price}</span>
+    <div class="absolute z-5 top-52 border px-4 py-6 bg-white">
+        <span class="text-orange-400 font-bold">{days}</span>
+        <h4 class="text-blue-950 font-bold text-xl">{title}</h4>
+        <span class="py-2">{ubicacion}</span>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+[
+    {
+        "icon": "bed",
+        "name": "Deluxe Room",
+        "body": "The deluxe room Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil sequi rem placeat quas sed error nobis quasi odio iusto? Ipsum, expedita accusamus voluptatem totam laborum maxime beatae ullam neque iusto."
+    },
+    {
+        "icon": "lunch_dining",
+        "name": "Delicious Food",
+        "body": "Suite room Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil sequi rem placeat quas sed error nobis quasi odio iusto? Ipsum, expedita accusamus voluptatem totam laborum maxime beatae ullam neque iusto."
+    },
+    {
+        "icon": "flight",
+        "name": "Airport Taxi",
+        "body": "Family room Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil sequi rem placeat quas sed error nobis quasi odio iusto? Ipsum, expedita accusamus voluptatem totam laborum maxime beatae ullam neque iusto."
+    },
+    {
+        "icon": "tour",
+        "name": "Tour Guide",
+        "body": "Single room for people Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil sequi rem placeat quas sed error nobis quasi odio iusto? Ipsum, expedita accusamus voluptatem totam laborum maxime beatae ullam neque iusto."
+    },
+    {
+        "icon": "wifi",
+        "name": "Free WiFi",
+        "body": "Double room Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil sequi rem placeat quas sed error nobis quasi odio iusto? Ipsum, expedita accusamus voluptatem totam laborum maxime beatae ullam neque iusto."
+    },
+    {
+        "icon": "medication",
+        "name": "Free Medication",
+        "body": "Triple room Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil sequi rem placeat quas sed error nobis quasi odio iusto? Ipsum, expedita accusamus voluptatem totam laborum maxime beatae ullam neque iusto."
+    }
+]
+
