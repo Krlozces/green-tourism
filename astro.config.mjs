@@ -6,6 +6,7 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://krlozces.github.io',
   integrations: [tailwind(), mdx(), react()],
   vite: {
     ssr: {
