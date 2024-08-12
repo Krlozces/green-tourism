@@ -8,8 +8,8 @@ const  { list, title } = Astro.props;
 <article>
     <h3 class="font-bold text-2xl pt-4">{title}</h3>
     <ul class="">
-        {list.map((item, index) => (
-            <li class="hover:text-[#F89500] py-1" key={index}><a href="#">{item}</a></li>
+        {list.map((item) => (
+            <li class="hover:text-[#F89500] py-1"><a href="#">{item}</a></li>
         ))}
     </ul>
 </article>
